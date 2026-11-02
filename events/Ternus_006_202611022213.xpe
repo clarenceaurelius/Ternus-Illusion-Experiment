@@ -1,0 +1,113 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Mon Nov 02 2026 22:13:38
+#sha1: feb60e
+#modules: config.py (52445a)
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+10914,design,log,
+#design: #exp: Ternus experiment
+#design: #dvn: condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+#design: block_cnt,block_id,block_condition,trial_cnt,trial_id,isi_ms
+#design: 0,0,DOTS,0,0,0
+#design: 0,0,DOTS,1,3,1000
+#design: 0,0,DOTS,2,1,50
+#design: 0,0,DOTS,3,2,500
+#design: 1,1,SHAPES,0,1,50
+#design: 1,1,SHAPES,1,3,1000
+#design: 1,1,SHAPES,2,0,0
+#design: 1,1,SHAPES,3,2,500
+10914,design,logged,
+10914,Experiment,started
+10932,Stimulus,presented,18
+12269,Keyboard,received,32,wait
+12282,Stimulus,presented,17
+12498,Stimulus,presented,8
+12764,Stimulus,presented,17
+12830,Stimulus,presented,12
+13098,Stimulus,presented,17
+13163,Stimulus,presented,8
+13430,Stimulus,presented,17
+13497,Stimulus,presented,12
+13764,Stimulus,presented,17
+13831,Stimulus,presented,8
+14098,Stimulus,presented,17
+14164,Stimulus,presented,12
+14431,Stimulus,presented,17
+14498,Stimulus,presented,19
+17092,Keyboard,received,1073741903,wait
+17109,Stimulus,presented,20
+17610,Data,saved
+17616,Stimulus,presented,17
+17831,Stimulus,presented,8
+18098,Stimulus,presented,17
+19116,Stimulus,presented,12
+19382,Stimulus,presented,17
+20398,Stimulus,presented,8
+20665,Stimulus,presented,17
+21682,Stimulus,presented,12
+21948,Stimulus,presented,17
+22967,Stimulus,presented,8
+23232,Stimulus,presented,17
+24249,Stimulus,presented,12
+24515,Stimulus,presented,17
+25535,Stimulus,presented,19
+27284,Keyboard,received,1073741903,wait
+27301,Stimulus,presented,20
+27801,Data,saved
+27816,Stimulus,presented,17
+28031,Stimulus,presented,8
+28297,Stimulus,presented,12
+28564,Stimulus,presented,8
+28831,Stimulus,presented,12
+29097,Stimulus,presented,8
+29364,Stimulus,presented,12
+29632,Stimulus,presented,19
+31872,Keyboard,received,1073741904,wait
+31885,Stimulus,presented,20
+32385,Data,saved
+32398,Stimulus,presented,17
+32614,Stimulus,presented,8
+32881,Stimulus,presented,17
+33397,Stimulus,presented,12
+33664,Stimulus,presented,17
+34181,Stimulus,presented,8
+34447,Stimulus,presented,17
+34964,Stimulus,presented,12
+35231,Stimulus,presented,17
+35747,Stimulus,presented,8
+36014,Stimulus,presented,17
+36530,Stimulus,presented,12
+36798,Stimulus,presented,17
+37315,Stimulus,presented,19
+48323,Keyboard,received,1073741903,wait
+48347,Stimulus,presented,20
+48849,Data,saved
+48868,Stimulus,presented,17
+49081,Stimulus,presented,0
+49347,Stimulus,presented,4
+49614,Stimulus,presented,0
+49880,Stimulus,presented,4
+50147,Stimulus,presented,0
+50414,Stimulus,presented,4
+50682,Stimulus,presented,19
+51099,Keyboard,received,1073741904,wait
+51116,Stimulus,presented,20
+51616,Data,saved
+51633,Stimulus,presented,17
+51847,Stimulus,presented,0
+52114,Stimulus,presented,17
+53132,Stimulus,presented,4
+53398,Stimulus,presented,17
+54415,Stimulus,presented,0
+54682,Stimulus,presented,17
+55698,Stimulus,presented,4
+61689,Stimulus,presented,17
+62720,Stimulus,presented,0
+62984,Stimulus,presented,17
+63998,Stimulus,presented,4
+64274,stderr,received,'Traceback (most recent call last):'
+64277,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/Ternus.py", line 137, in <module>\n    t.stimuli[4].present()\n    ~~~~~~~~~~~~~~~~~~~~^^'
+64277,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/.venv/lib/python3.14/site-packages/expyriment/stimuli/_visual.py", line 1192, in present\n    _internals.active_exp.screen.update()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^'
+64277,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/.venv/lib/python3.14/site-packages/expyriment/io/_screen.py", line 238, in update\n    pygame.display.flip()\n    ~~~~~~~~~~~~~~~~~~~^^'
+64278,stderr,received,'KeyboardInterrupt'

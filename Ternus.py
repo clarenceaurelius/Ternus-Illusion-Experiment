@@ -11,6 +11,11 @@ group_response = "group_response"
 key = "key"
 rt = "rt_ms"
 
+RESPONSE_CODING = {
+    xpy.misc.constants.K_LEFT: ("element", 0),
+    xpy.misc.constants.K_RIGHT: ("group", 1),
+}
+
 # Experiment initialization
 e = xpy.design.Experiment(name="Ternus experiment", background_colour=config.BLACK, foreground_colour=config.WHITE)
 e.add_data_variable_names([condition, trial, isi, frame_duration, response, group_response, key, rt])
@@ -93,7 +98,6 @@ for t in b1.trials:
     t.add_stimulus(screen2)
     t.add_stimulus(screen5)
     t.add_stimulus(text2)
-    t.add_stimulus(screen5)
     t.add_stimulus(screen6)
 
 # Stimuli for SHAPES trials
@@ -102,7 +106,6 @@ for t in b2.trials:
     t.add_stimulus(screen4)
     t.add_stimulus(screen5)
     t.add_stimulus(text2)
-    t.add_stimulus(screen5)
     t.add_stimulus(screen6)
 
 # Experiment start
@@ -120,40 +123,31 @@ e.keyboard.wait(keys=[xpy.misc.constants.K_SPACE])
 # Trial presentation
 for b in e.blocks:
     for t in b.trials:
+        first_frame, second_frame, fixation, prompt, blank = t.stimuli
         v = t.get_factor(isi)
-        t.stimuli[2].present()
+        fixation.present()
         e.clock.wait(200)
 
-        for i in range(3):
-            t.stimuli[0].present()
-            e.clock.wait(250)
-            if v > 0:
-                t.stimuli[4].present()
-                e.clock.wait(v)
-
-            t.stimuli[1].present()
-            e.clock.wait(250)
-            if v > 0:
-                t.stimuli[4].present()
-                e.clock.wait(v)
+        for _ in range(3):
+            for frame in (first_frame, second_frame):
+                frame.present()
+                e.clock.wait(250)
+                if v > 0:
+                    fixation.present()
+                    e.clock.wait(v)
 
         # Response collection
-        t.stimuli[3].present()
-        k, r = e.keyboard.wait(keys=[xpy.misc.constants.K_LEFT, xpy.misc.constants.K_RIGHT])
-
-        if k == xpy.misc.constants.K_LEFT:
-            a = "element"
-            g = 0
-        else:
-            a = "group"
-            g = 1
+        prompt.present()
+        k, r = e.keyboard.wait(keys=list(RESPONSE_CODING))
+        a, g = RESPONSE_CODING[k]
 
         # Intertrial interval
-        t.stimuli[5].present()
+        blank.present()
         e.clock.wait(500)
         # Data saving
         e.data.add([b.get_factor(condition), t.id, v, 250, a, g, k, r])
         e.data.save()
+
 
 # Experiment end
 xpy.control.end()

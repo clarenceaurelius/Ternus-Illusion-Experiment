@@ -1,0 +1,26 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Mon Nov 02 2026 22:44:58
+#sha1: 90dd9d
+#modules: config.py (52445a)
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+26799,design,log,
+#design: #exp: Ternus experiment
+#design: #dvn: condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+#design: block_cnt,block_id,block_condition,trial_cnt,trial_id,isi_ms
+#design: 0,0,DOTS,0,1,50
+#design: 0,0,DOTS,1,0,0
+#design: 0,0,DOTS,2,2,500
+#design: 0,0,DOTS,3,3,1000
+#design: 1,1,SHAPES,0,1,50
+#design: 1,1,SHAPES,1,0,0
+#design: 1,1,SHAPES,2,2,500
+#design: 1,1,SHAPES,3,3,1000
+26799,design,logged,
+26799,Experiment,started
+26811,Stimulus,presented,18
+27723,Keyboard,received,32,wait
+27727,stderr,received,'Traceback (most recent call last):'
+27732,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/Ternus.py", line 128, in <module>\n    first_frame, second_frame, fixation, prompt, blank = t.stimuli\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+27732,stderr,received,'ValueError: too many values to unpack (expected 5, got 6)'
