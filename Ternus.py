@@ -114,8 +114,7 @@ e.add_block(b2)
 xpy.control.start(skip_ready_screen=True)
 
 # Counterbalancing
-if e.subject % 2 == 0:
-    e.blocks.reverse()
+e.permute_blocks(xpy.misc.constants.P_BALANCED_LATIN_SQUARE)
 
 # Instructions
 text1.present()
