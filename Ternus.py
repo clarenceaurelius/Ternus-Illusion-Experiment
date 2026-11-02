@@ -1,6 +1,5 @@
 from config import WHITE
 from config import BLACK
-import random
 import expyriment as xpy
 import config
 
@@ -81,9 +80,7 @@ b1.set_factor(condition, "DOTS")
 b1.add_trials_full_factorial({isi: config.trial_latencies}, copies=config.trial_repetitions)
 
 # Randomization of DOTS trials
-for i in range(len(b1.trials) - 1, 0, -1):
-    j = random.randint(0, i)
-    b1.trials[i], b1.trials[j] = b1.trials[j], b1.trials[i]
+b1.shuffle_trials()
 
 # SHAPES block and trial construction
 b2 = xpy.design.Block(name="SHAPES")
@@ -91,9 +88,7 @@ b2.set_factor(condition, "SHAPES")
 b2.add_trials_full_factorial({isi: config.trial_latencies}, copies=config.trial_repetitions)
 
 # Randomization of SHAPES trials
-for i in range(len(b2.trials) - 1, 0, -1):
-    j = random.randint(0, i)
-    b2.trials[i], b2.trials[j] = b2.trials[j], b2.trials[i]
+b2.shuffle_trials()
 
 # Stimuli for DOTS trials
 for t in b1.trials:
