@@ -13,17 +13,28 @@ RECTANGLE_SIZE = (35, 35)
 CROSS_SIZE = (20, 20)
 LINE_WIDTH = 4
 
-
-
 # Position config
 LEFT_OUTER = (-120, -50) # first element
 LEFT_INNER = (-40, -50)  # second element
 RIGHT_INNER = (40, -50)  # third element
 RIGHT_OUTER = (120, -50) # fourth element
 
+trial_latencies = [0, 50, 500, 1000]
+trial_repetitions = 5
+
+# Variable names
+condition = "condition"
+trial = "trial"
+isi = "isi_ms"
+frame_duration = "frame_ms"
+response = "response"
+group_response = "group_response"
+key = "key"
+rt = "rt_ms"
+
 # Experiment initialization
 e = xpy.design.Experiment(name="Ternus experiment", background_colour=BLACK, foreground_colour=WHITE)
-e.data_variable_names = ["condition", "trial", "isi_ms", "frame_ms", "response", "group_response", "key", "rt_ms"]
+e.data_variable_names = [condition, trial, isi, frame_duration, response, group_response, key, rt]
 xpy.control.initialize(e)
 
 
@@ -37,18 +48,24 @@ xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_INNER, colour=(WHITE)).plot
 screen2 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
 xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_INNER, colour=(WHITE)).plot(screen2)
 xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_INNER, colour=(WHITE)).plot(screen2)
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_OUTER, colour=(WHITE)).plot(screen2)
+xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_OUTER, colour=(WHITE)).plot(screen2)
 
 # SHAPES stimuli
 screen3 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
+# Circle
 xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_OUTER, colour=(WHITE)).plot(screen3)
+# Triangle
 xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(3, 54), position=LEFT_INNER, colour=(WHITE)).plot(screen3)
+# Square
 xpy.stimuli.Rectangle(size=RECTANGLE_SIZE, position=RIGHT_INNER, colour=(WHITE)).plot(screen3)
 
 screen4 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
+# Triangle
 xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(3, 54), position=LEFT_INNER, colour=(WHITE)).plot(screen4)
+# Square
 xpy.stimuli.Rectangle(size=RECTANGLE_SIZE, position=RIGHT_INNER, colour=(WHITE)).plot(screen4)
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_OUTER, colour=(WHITE)).plot(screen4)
+# Circle
+xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_OUTER, colour=(WHITE)).plot(screen4)
 
 # Fixation cross and text screens
 thing1 = xpy.stimuli.FixCross(size=CROSS_SIZE, line_width=LINE_WIDTH, colour=(WHITE))
@@ -78,11 +95,12 @@ screen6.preload()
 
 # DOTS block and trial construction
 b1 = xpy.design.Block(name="DOTS")
-b1.set_factor("condition", "DOTS")
-for v in [0, 0, 0, 0, 0, 50, 50, 50, 50, 50, 500, 500, 500, 500, 500, 1000, 1000, 1000, 1000, 1000]:
-    t = xpy.design.Trial()
-    t.set_factor("isi_ms", v)
-    b1.add_trial(t)
+b1.set_factor(condition, "DOTS")
+for v in trial_latencies:   
+    for _ in range(trial_repetitions):
+        t = xpy.design.Trial()
+        t.set_factor(isi, v)
+        b1.add_trial(t)
 
 # Randomization of DOTS trials
 for i in range(len(b1.trials) - 1, 0, -1):
@@ -91,11 +109,12 @@ for i in range(len(b1.trials) - 1, 0, -1):
 
 # SHAPES block and trial construction
 b2 = xpy.design.Block(name="SHAPES")
-b2.set_factor("condition", "SHAPES")
-for v in [0, 0, 0, 0, 0, 50, 50, 50, 50, 50, 500, 500, 500, 500, 500, 1000, 1000, 1000, 1000, 1000]:
-    t = xpy.design.Trial()
-    t.set_factor("isi_ms", v)
-    b2.add_trial(t)
+b2.set_factor(condition, "SHAPES")
+for v in trial_latencies:
+    for _ in range(trial_repetitions):
+        t = xpy.design.Trial()
+        t.set_factor(isi, v)
+        b2.add_trial(t)
 
 # Randomization of SHAPES trials
 for i in range(len(b2.trials) - 1, 0, -1):
@@ -136,7 +155,7 @@ e.keyboard.wait(keys=[xpy.misc.constants.K_SPACE])
 # Trial presentation
 for b in e.blocks:
     for t in b.trials:
-        v = t.get_factor("isi_ms")
+        v = t.get_factor(isi)
         t.stimuli[2].present()
         e.clock.wait(200)
 
@@ -168,7 +187,7 @@ for b in e.blocks:
         t.stimuli[5].present()
         e.clock.wait(500)
         # Data saving
-        e.data.add([b.get_factor("condition"), t.id, v, 250, a, g, k, r])
+        e.data.add([b.get_factor(condition), t.id, v, 250, a, g, k, r])
         e.data.save()
 
 # Experiment end

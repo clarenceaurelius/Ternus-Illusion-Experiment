@@ -1,0 +1,107 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Mon Nov 02 2026 21:38:36
+#sha1: 41e9fd
+#modules: 
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+13435,design,log,
+#design: #exp: Ternus experiment
+#design: #dvn: condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+#design: block_cnt,block_id,block_condition,trial_cnt,trial_id,isi_ms
+#design: 0,0,DOTS,0,10,500
+#design: 0,0,DOTS,1,14,500
+#design: 0,0,DOTS,2,6,50
+#design: 0,0,DOTS,3,12,500
+#design: 0,0,DOTS,4,11,500
+#design: 0,0,DOTS,5,16,1000
+#design: 0,0,DOTS,6,0,0
+#design: 0,0,DOTS,7,4,0
+#design: 0,0,DOTS,8,7,50
+#design: 0,0,DOTS,9,9,50
+#design: 0,0,DOTS,10,1,0
+#design: 0,0,DOTS,11,5,50
+#design: 0,0,DOTS,12,19,1000
+#design: 0,0,DOTS,13,2,0
+#design: 0,0,DOTS,14,17,1000
+#design: 0,0,DOTS,15,15,1000
+#design: 0,0,DOTS,16,13,500
+#design: 0,0,DOTS,17,3,0
+#design: 0,0,DOTS,18,18,1000
+#design: 0,0,DOTS,19,8,50
+#design: 1,1,SHAPES,0,10,500
+#design: 1,1,SHAPES,1,9,50
+#design: 1,1,SHAPES,2,19,1000
+#design: 1,1,SHAPES,3,15,1000
+#design: 1,1,SHAPES,4,1,0
+#design: 1,1,SHAPES,5,4,0
+#design: 1,1,SHAPES,6,11,500
+#design: 1,1,SHAPES,7,18,1000
+#design: 1,1,SHAPES,8,3,0
+#design: 1,1,SHAPES,9,7,50
+#design: 1,1,SHAPES,10,5,50
+#design: 1,1,SHAPES,11,13,500
+#design: 1,1,SHAPES,12,8,50
+#design: 1,1,SHAPES,13,17,1000
+#design: 1,1,SHAPES,14,2,0
+#design: 1,1,SHAPES,15,14,500
+#design: 1,1,SHAPES,16,0,0
+#design: 1,1,SHAPES,17,12,500
+#design: 1,1,SHAPES,18,16,1000
+#design: 1,1,SHAPES,19,6,50
+13436,design,logged,
+13436,Experiment,started
+13450,Stimulus,presented,18
+16655,Keyboard,received,32,wait
+16675,Stimulus,presented,17
+16879,Stimulus,presented,8
+17146,Stimulus,presented,17
+17662,Stimulus,presented,12
+17929,Stimulus,presented,17
+18445,Stimulus,presented,8
+18712,Stimulus,presented,17
+19229,Stimulus,presented,12
+19496,Stimulus,presented,17
+20012,Stimulus,presented,8
+20279,Stimulus,presented,17
+20795,Stimulus,presented,12
+21062,Stimulus,presented,17
+21579,Stimulus,presented,19
+24642,Keyboard,received,1073741903,wait
+24655,Stimulus,presented,20
+25156,Data,saved
+25164,Stimulus,presented,17
+25379,Stimulus,presented,8
+25646,Stimulus,presented,17
+25712,Stimulus,presented,12
+25978,Stimulus,presented,17
+26045,Stimulus,presented,8
+26312,Stimulus,presented,17
+26378,Stimulus,presented,12
+26646,Stimulus,presented,17
+26712,Stimulus,presented,8
+26978,Stimulus,presented,17
+27045,Stimulus,presented,12
+27312,Stimulus,presented,17
+27379,Stimulus,presented,19
+28821,Keyboard,received,1073741904,wait
+28833,Stimulus,presented,20
+29333,Data,saved
+29347,Stimulus,presented,17
+29562,Stimulus,presented,8
+29829,Stimulus,presented,17
+30848,Stimulus,presented,12
+31114,Stimulus,presented,17
+32130,Stimulus,presented,8
+32397,Stimulus,presented,17
+33413,Stimulus,presented,12
+33681,Stimulus,presented,17
+34697,Stimulus,presented,8
+34963,Stimulus,presented,17
+35980,Stimulus,presented,12
+36246,Stimulus,presented,17
+37264,Stimulus,presented,19
+46419,stderr,received,'Traceback (most recent call last):'
+46425,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/Ternus.py", line 172, in <module>\n    k, r = e.keyboard.wait(keys=[xpy.misc.constants.K_LEFT, xpy.misc.constants.K_RIGHT])\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+46425,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/.venv/lib/python3.14/site-packages/expyriment/io/_keyboard.py", line 378, in wait\n    for event in pygame.event.get([pygame.KEYDOWN, pygame.KEYUP]):\n                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+46425,stderr,received,'KeyboardInterrupt'

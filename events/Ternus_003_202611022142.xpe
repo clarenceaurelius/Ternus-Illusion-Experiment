@@ -1,0 +1,148 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Mon Nov 02 2026 21:42:43
+#sha1: bc4fa6
+#modules: 
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+11012,design,log,
+#design: #exp: Ternus experiment
+#design: #dvn: condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+#design: block_cnt,block_id,block_condition,trial_cnt,trial_id,isi_ms
+#design: 0,0,DOTS,0,10,500
+#design: 0,0,DOTS,1,1,0
+#design: 0,0,DOTS,2,6,50
+#design: 0,0,DOTS,3,8,50
+#design: 0,0,DOTS,4,16,1000
+#design: 0,0,DOTS,5,11,500
+#design: 0,0,DOTS,6,5,50
+#design: 0,0,DOTS,7,13,500
+#design: 0,0,DOTS,8,12,500
+#design: 0,0,DOTS,9,18,1000
+#design: 0,0,DOTS,10,0,0
+#design: 0,0,DOTS,11,4,0
+#design: 0,0,DOTS,12,15,1000
+#design: 0,0,DOTS,13,3,0
+#design: 0,0,DOTS,14,7,50
+#design: 0,0,DOTS,15,2,0
+#design: 0,0,DOTS,16,19,1000
+#design: 0,0,DOTS,17,14,500
+#design: 0,0,DOTS,18,17,1000
+#design: 0,0,DOTS,19,9,50
+#design: 1,1,SHAPES,0,8,50
+#design: 1,1,SHAPES,1,2,0
+#design: 1,1,SHAPES,2,12,500
+#design: 1,1,SHAPES,3,4,0
+#design: 1,1,SHAPES,4,14,500
+#design: 1,1,SHAPES,5,18,1000
+#design: 1,1,SHAPES,6,7,50
+#design: 1,1,SHAPES,7,16,1000
+#design: 1,1,SHAPES,8,3,0
+#design: 1,1,SHAPES,9,15,1000
+#design: 1,1,SHAPES,10,11,500
+#design: 1,1,SHAPES,11,0,0
+#design: 1,1,SHAPES,12,10,500
+#design: 1,1,SHAPES,13,5,50
+#design: 1,1,SHAPES,14,13,500
+#design: 1,1,SHAPES,15,17,1000
+#design: 1,1,SHAPES,16,19,1000
+#design: 1,1,SHAPES,17,9,50
+#design: 1,1,SHAPES,18,1,0
+#design: 1,1,SHAPES,19,6,50
+11012,design,logged,
+11012,Experiment,started
+11029,Stimulus,presented,18
+12018,Keyboard,received,32,wait
+12030,Stimulus,presented,17
+12247,Stimulus,presented,0
+12511,Stimulus,presented,17
+13028,Stimulus,presented,4
+13295,Stimulus,presented,17
+13811,Stimulus,presented,0
+14078,Stimulus,presented,17
+14594,Stimulus,presented,4
+14861,Stimulus,presented,17
+15378,Stimulus,presented,0
+15644,Stimulus,presented,17
+16161,Stimulus,presented,4
+16428,Stimulus,presented,17
+16946,Stimulus,presented,19
+18750,Keyboard,received,1073741903,wait
+18772,Stimulus,presented,20
+19273,Data,saved
+19280,Stimulus,presented,17
+19495,Stimulus,presented,0
+19761,Stimulus,presented,4
+20028,Stimulus,presented,0
+20294,Stimulus,presented,4
+20560,Stimulus,presented,0
+20828,Stimulus,presented,4
+21095,Stimulus,presented,19
+25776,Keyboard,received,1073741903,wait
+25788,Stimulus,presented,20
+26288,Data,saved
+26298,Stimulus,presented,17
+26511,Stimulus,presented,0
+26778,Stimulus,presented,17
+26844,Stimulus,presented,4
+27112,Stimulus,presented,17
+27177,Stimulus,presented,0
+27444,Stimulus,presented,17
+27510,Stimulus,presented,4
+27777,Stimulus,presented,17
+27844,Stimulus,presented,0
+28111,Stimulus,presented,17
+28177,Stimulus,presented,4
+28445,Stimulus,presented,17
+28513,Stimulus,presented,19
+29092,Keyboard,received,1073741903,wait
+29095,Stimulus,presented,20
+29595,Data,saved
+29613,Stimulus,presented,17
+29827,Stimulus,presented,0
+30095,Stimulus,presented,17
+30161,Stimulus,presented,4
+30428,Stimulus,presented,17
+30494,Stimulus,presented,0
+30761,Stimulus,presented,17
+30827,Stimulus,presented,4
+31095,Stimulus,presented,17
+31161,Stimulus,presented,0
+31428,Stimulus,presented,17
+31494,Stimulus,presented,4
+31761,Stimulus,presented,17
+31827,Stimulus,presented,19
+32255,Keyboard,received,1073741903,wait
+32263,Stimulus,presented,20
+32763,Data,saved
+32778,Stimulus,presented,17
+32994,Stimulus,presented,0
+33261,Stimulus,presented,17
+34279,Stimulus,presented,4
+34548,Stimulus,presented,17
+35562,Stimulus,presented,0
+35829,Stimulus,presented,17
+36847,Stimulus,presented,4
+37113,Stimulus,presented,17
+38129,Stimulus,presented,0
+38395,Stimulus,presented,17
+39413,Stimulus,presented,4
+39678,Stimulus,presented,17
+40699,Stimulus,presented,19
+42264,Keyboard,received,1073741903,wait
+42283,Stimulus,presented,20
+42784,Data,saved
+42799,Stimulus,presented,17
+43011,Stimulus,presented,0
+43278,Stimulus,presented,17
+43794,Stimulus,presented,4
+44061,Stimulus,presented,17
+44578,Stimulus,presented,0
+44888,Stimulus,presented,17
+45395,Stimulus,presented,4
+51072,Stimulus,presented,17
+51582,Stimulus,presented,0
+51638,stderr,received,'Traceback (most recent call last):'
+51643,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/Ternus.py", line 159, in <module>\n    e.clock.wait(250)\n    ~~~~~~~~~~~~^^^^^'
+51643,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/.venv/lib/python3.14/site-packages/expyriment/misc/_clock.py", line 154, in wait\n    pygame.event.pump()\n    ~~~~~~~~~~~~~~~~~^^'
+51643,stderr,received,'KeyboardInterrupt'

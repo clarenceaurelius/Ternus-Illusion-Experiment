@@ -1,0 +1,10 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Mon Nov 02 2026 21:37:47
+#sha1: a5bc35
+#modules: 
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+6224,stderr,received,'Traceback (most recent call last):'
+6230,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/Ternus.py", line 56, in <module>\n    xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(TRIANGLE_SHAPE), position=LEFT_INNER, colour=(WHITE)).plot(screen3)\n                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^'
+6230,stderr,received,"TypeError: vertices_regular_polygon() missing 1 required positional argument: 'length'"
