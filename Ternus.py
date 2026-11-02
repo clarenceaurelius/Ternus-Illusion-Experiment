@@ -1,5 +1,3 @@
-from config import WHITE
-from config import BLACK
 import expyriment as xpy
 import config
 
@@ -15,12 +13,11 @@ rt = "rt_ms"
 
 # Experiment initialization
 e = xpy.design.Experiment(name="Ternus experiment", background_colour=config.BLACK, foreground_colour=config.WHITE)
-e.data_variable_names = [condition, trial, isi, frame_duration, response, group_response, key, rt]
+e.add_data_variable_names([condition, trial, isi, frame_duration, response, group_response, key, rt])
 xpy.control.initialize(e)
 
 
 # DOTS stimuli
-list1 = []
 screen1 = xpy.stimuli.Canvas(size=(config.SCREEN_WIDTH, config.SCREEN_HEIGHT), colour=(config.BLACK))
 xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.LEFT_OUTER, colour=(config.WHITE)).plot(screen1)
 xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.LEFT_INNER, colour=(config.WHITE)).plot(screen1)
