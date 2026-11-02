@@ -1,26 +1,8 @@
+from config import WHITE
+from config import BLACK
 import random
 import expyriment as xpy
-
-# Colour config
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
-
-# Size config
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 300
-DOT_RADIUS = 20
-RECTANGLE_SIZE = (35, 35)
-CROSS_SIZE = (20, 20)
-LINE_WIDTH = 4
-
-# Position config
-LEFT_OUTER = (-120, -50) # first element
-LEFT_INNER = (-40, -50)  # second element
-RIGHT_INNER = (40, -50)  # third element
-RIGHT_OUTER = (120, -50) # fourth element
-
-trial_latencies = [0, 50, 500, 1000]
-trial_repetitions = 5
+import config
 
 # Variable names
 condition = "condition"
@@ -33,47 +15,47 @@ key = "key"
 rt = "rt_ms"
 
 # Experiment initialization
-e = xpy.design.Experiment(name="Ternus experiment", background_colour=BLACK, foreground_colour=WHITE)
+e = xpy.design.Experiment(name="Ternus experiment", background_colour=config.BLACK, foreground_colour=config.WHITE)
 e.data_variable_names = [condition, trial, isi, frame_duration, response, group_response, key, rt]
 xpy.control.initialize(e)
 
 
 # DOTS stimuli
 list1 = []
-screen1 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_OUTER, colour=(WHITE)).plot(screen1)
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_INNER, colour=(WHITE)).plot(screen1)
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_INNER, colour=(WHITE)).plot(screen1)
+screen1 = xpy.stimuli.Canvas(size=(config.SCREEN_WIDTH, config.SCREEN_HEIGHT), colour=(config.BLACK))
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.LEFT_OUTER, colour=(config.WHITE)).plot(screen1)
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.LEFT_INNER, colour=(config.WHITE)).plot(screen1)
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.RIGHT_INNER, colour=(config.WHITE)).plot(screen1)
 
-screen2 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_INNER, colour=(WHITE)).plot(screen2)
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_INNER, colour=(WHITE)).plot(screen2)
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_OUTER, colour=(WHITE)).plot(screen2)
+screen2 = xpy.stimuli.Canvas(size=(config.SCREEN_WIDTH, config.SCREEN_HEIGHT), colour=(config.BLACK))
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.LEFT_INNER, colour=(config.WHITE)).plot(screen2)
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.RIGHT_INNER, colour=(config.WHITE)).plot(screen2)
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.RIGHT_OUTER, colour=(config.WHITE)).plot(screen2)
 
 # SHAPES stimuli
-screen3 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
+screen3 = xpy.stimuli.Canvas(size=(config.SCREEN_WIDTH, config.SCREEN_HEIGHT), colour=(config.BLACK))
 # Circle
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=LEFT_OUTER, colour=(WHITE)).plot(screen3)
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.LEFT_OUTER, colour=(config.WHITE)).plot(screen3)
 # Triangle
-xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(3, 54), position=LEFT_INNER, colour=(WHITE)).plot(screen3)
+xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(3, 54), position=config.LEFT_INNER, colour=(config.WHITE)).plot(screen3)
 # Square
-xpy.stimuli.Rectangle(size=RECTANGLE_SIZE, position=RIGHT_INNER, colour=(WHITE)).plot(screen3)
+xpy.stimuli.Rectangle(size=config.RECTANGLE_SIZE, position=config.RIGHT_INNER, colour=(config.WHITE)).plot(screen3)
 
-screen4 = xpy.stimuli.Canvas(size=(SCREEN_WIDTH, SCREEN_HEIGHT), colour=(BLACK))
+screen4 = xpy.stimuli.Canvas(size=(config.SCREEN_WIDTH, config.SCREEN_HEIGHT), colour=(config.BLACK))
 # Triangle
-xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(3, 54), position=LEFT_INNER, colour=(WHITE)).plot(screen4)
+xpy.stimuli.Shape(vertex_list=xpy.misc.geometry.vertices_regular_polygon(3, 54), position=config.LEFT_INNER, colour=(config.WHITE)).plot(screen4)
 # Square
-xpy.stimuli.Rectangle(size=RECTANGLE_SIZE, position=RIGHT_INNER, colour=(WHITE)).plot(screen4)
+xpy.stimuli.Rectangle(size=config.RECTANGLE_SIZE, position=config.RIGHT_INNER, colour=(config.WHITE)).plot(screen4)
 # Circle
-xpy.stimuli.Circle(radius=DOT_RADIUS, position=RIGHT_OUTER, colour=(WHITE)).plot(screen4)
+xpy.stimuli.Circle(radius=config.DOT_RADIUS, position=config.RIGHT_OUTER, colour=(config.WHITE)).plot(screen4)
 
 # Fixation cross and text screens
-thing1 = xpy.stimuli.FixCross(size=CROSS_SIZE, line_width=LINE_WIDTH, colour=(WHITE))
-screen5 = xpy.stimuli.BlankScreen(colour=(BLACK))
+thing1 = xpy.stimuli.FixCross(size=config.CROSS_SIZE, line_width=config.LINE_WIDTH, colour=(config.WHITE))
+screen5 = xpy.stimuli.BlankScreen(colour=(config.BLACK))
 thing1.plot(screen5)
 text1 = xpy.stimuli.TextScreen(heading="Ternus experiment", text="Keep your eyes on the central cross.\n\nLEFT = element motion\nRIGHT = group motion\n\nPress SPACE to start.")
 text2 = xpy.stimuli.TextScreen(heading="What did you see?", text="LEFT = element motion\nRIGHT = group motion")
-screen6 = xpy.stimuli.BlankScreen(colour=(BLACK))
+screen6 = xpy.stimuli.BlankScreen(colour=(config.BLACK))
 
 # Fixation on stimulus and text screens
 thing1.plot(screen1)
@@ -96,8 +78,8 @@ screen6.preload()
 # DOTS block and trial construction
 b1 = xpy.design.Block(name="DOTS")
 b1.set_factor(condition, "DOTS")
-for v in trial_latencies:   
-    for _ in range(trial_repetitions):
+for v in config.trial_latencies:   
+    for _ in range(config.trial_repetitions):
         t = xpy.design.Trial()
         t.set_factor(isi, v)
         b1.add_trial(t)
@@ -110,8 +92,8 @@ for i in range(len(b1.trials) - 1, 0, -1):
 # SHAPES block and trial construction
 b2 = xpy.design.Block(name="SHAPES")
 b2.set_factor(condition, "SHAPES")
-for v in trial_latencies:
-    for _ in range(trial_repetitions):
+for v in config.trial_latencies:
+    for _ in range(config.trial_repetitions):
         t = xpy.design.Trial()
         t.set_factor(isi, v)
         b2.add_trial(t)

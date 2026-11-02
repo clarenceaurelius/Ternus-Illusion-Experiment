@@ -1,0 +1,58 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Mon Nov 02 2026 22:01:46
+#sha1: 4a2401
+#modules: config.py (52445a)
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+10154,design,log,
+#design: #exp: Ternus experiment
+#design: #dvn: condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+#design: block_cnt,block_id,block_condition,trial_cnt,trial_id,isi_ms
+#design: 0,0,DOTS,0,3,1000
+#design: 0,0,DOTS,1,1,50
+#design: 0,0,DOTS,2,0,0
+#design: 0,0,DOTS,3,2,500
+#design: 1,1,SHAPES,0,1,50
+#design: 1,1,SHAPES,1,3,1000
+#design: 1,1,SHAPES,2,0,0
+#design: 1,1,SHAPES,3,2,500
+10155,design,logged,
+10155,Experiment,started
+10173,Stimulus,presented,18
+11422,Keyboard,received,32,wait
+11444,Stimulus,presented,17
+11655,Stimulus,presented,0
+11920,Stimulus,presented,17
+12938,Stimulus,presented,4
+13205,Stimulus,presented,17
+14221,Stimulus,presented,0
+14488,Stimulus,presented,17
+15504,Stimulus,presented,4
+15772,Stimulus,presented,17
+16788,Stimulus,presented,0
+17055,Stimulus,presented,17
+18072,Stimulus,presented,4
+18338,Stimulus,presented,17
+19356,Stimulus,presented,19
+21274,Keyboard,received,1073741903,wait
+21291,Stimulus,presented,20
+21793,Data,saved
+21805,Stimulus,presented,17
+22020,Stimulus,presented,0
+22287,Stimulus,presented,17
+22354,Stimulus,presented,4
+22620,Stimulus,presented,17
+22686,Stimulus,presented,0
+22953,Stimulus,presented,17
+23019,Stimulus,presented,4
+23287,Stimulus,presented,17
+23353,Stimulus,presented,0
+23620,Stimulus,presented,17
+23687,Stimulus,presented,4
+23954,Stimulus,presented,17
+24020,Stimulus,presented,19
+35622,stderr,received,'Traceback (most recent call last):'
+35627,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/Ternus.py", line 159, in <module>\n    k, r = e.keyboard.wait(keys=[xpy.misc.constants.K_LEFT, xpy.misc.constants.K_RIGHT])\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+35627,stderr,received,'  File "/Users/clarenceclaus/Desktop/Cog-Sup/Codework/Experimental approaches/Ternus-Illusion-Experiment/.venv/lib/python3.14/site-packages/expyriment/io/_keyboard.py", line 378, in wait\n    for event in pygame.event.get([pygame.KEYDOWN, pygame.KEYUP]):\n                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+35627,stderr,received,'KeyboardInterrupt'
