@@ -78,11 +78,7 @@ screen6.preload()
 # DOTS block and trial construction
 b1 = xpy.design.Block(name="DOTS")
 b1.set_factor(condition, "DOTS")
-for v in config.trial_latencies:   
-    for _ in range(config.trial_repetitions):
-        t = xpy.design.Trial()
-        t.set_factor(isi, v)
-        b1.add_trial(t)
+b1.add_trials_full_factorial({isi: config.trial_latencies}, copies=config.trial_repetitions)
 
 # Randomization of DOTS trials
 for i in range(len(b1.trials) - 1, 0, -1):
@@ -92,11 +88,7 @@ for i in range(len(b1.trials) - 1, 0, -1):
 # SHAPES block and trial construction
 b2 = xpy.design.Block(name="SHAPES")
 b2.set_factor(condition, "SHAPES")
-for v in config.trial_latencies:
-    for _ in range(config.trial_repetitions):
-        t = xpy.design.Trial()
-        t.set_factor(isi, v)
-        b2.add_trial(t)
+b2.add_trials_full_factorial({isi: config.trial_latencies}, copies=config.trial_repetitions)
 
 # Randomization of SHAPES trials
 for i in range(len(b2.trials) - 1, 0, -1):
