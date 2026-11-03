@@ -1,0 +1,37 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpd-file, coding: UTF-8
+#date: Tue Nov 03 2026 11:42:32
+#--EXPERIMENT INFO
+#e mainfile: Ternus.py
+#e sha1: f232d5
+#e modules: config.py (cb14cd)
+#e Experiment: Ternus experiment
+#e no between subject factors
+#e Block 0: DOTS
+#e     block factors: condition = DOTS
+#e     n trials: 8
+#e     trial factors: isi_ms = [0, 1000, 50, 500]
+#e                    
+#e Block 1: SHAPES
+#e     block factors: condition = SHAPES
+#e     n trials: 8
+#e     trial factors: isi_ms = [0, 1000, 50, 500]
+#e                    
+#--SUBJECT INFO
+#s id: 11
+subject_id,condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+11,DOTS,4,500,250,group,1,1073741903,1742
+11,DOTS,0,0,250,element,0,1073741904,494
+11,DOTS,3,50,250,group,1,1073741903,6156
+11,DOTS,7,1000,250,group,1,1073741903,389
+11,DOTS,6,1000,250,group,1,1073741903,719
+11,DOTS,5,500,250,element,0,1073741904,7896
+11,DOTS,2,50,250,group,1,1073741903,806
+11,DOTS,1,0,250,element,0,1073741904,340
+11,SHAPES,1,0,250,element,0,1073741904,345
+11,SHAPES,2,50,250,element,0,1073741904,2556
+11,SHAPES,6,1000,250,group,1,1073741903,3831
+11,SHAPES,3,50,250,element,0,1073741904,3172
+11,SHAPES,5,500,250,group,1,1073741903,1171
+11,SHAPES,4,500,250,group,1,1073741903,1141
+11,SHAPES,7,1000,250,group,1,1073741903,536
+11,SHAPES,0,0,250,element,0,1073741904,376

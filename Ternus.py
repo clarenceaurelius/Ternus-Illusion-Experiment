@@ -1,10 +1,10 @@
 import expyriment as xpy
 import config
 
-# 
+# DEV setting
 if config.DEV_MODE:
     xpy.control.set_develop_mode(True)
-    config.trial_repetitions = 5 # 20 trials per block
+    config.trial_repetitions = 2 # 8 trials per block
 xpy.io.defaults.datafile_directory = config.DATA_DIR
 xpy.io.defaults.eventfile_directory = config.EVENTS_DIR
 
