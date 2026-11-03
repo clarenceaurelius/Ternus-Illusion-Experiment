@@ -1,6 +1,13 @@
 import expyriment as xpy
 import config
 
+# 
+if config.DEV_MODE:
+    xpy.control.set_develop_mode(True)
+    config.trial_repetitions = 5 # 20 trials per block
+xpy.io.defaults.datafile_directory = config.DATA_DIR
+xpy.io.defaults.eventfile_directory = config.EVENTS_DIR
+
 # Variable names
 condition = "condition"
 trial = "trial"
@@ -11,6 +18,7 @@ group_response = "group_response"
 key = "key"
 rt = "rt_ms"
 
+# Response mapping
 RESPONSE_CODING = {
     xpy.misc.constants.K_LEFT: ("element", 0),
     xpy.misc.constants.K_RIGHT: ("group", 1),

@@ -1,0 +1,148 @@
+#Expyriment 1.0.1 (Python 3.14.7), .xpe-file, coding: UTF-8
+#date: Tue Nov 03 2026 11:19:45
+#sha1: 897aeb
+#modules: config.py (2b5b1a)
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Darwin', node='Clarences-MacBook-Air.local', release='24.6.0', version='Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:32 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T8112', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+912,design,log,
+#design: #exp: Ternus experiment
+#design: #dvn: condition,trial,isi_ms,frame_ms,response,group_response,key,rt_ms
+#design: block_cnt,block_id,block_condition,trial_cnt,trial_id,isi_ms
+#design: 0,0,DOTS,0,3,1000
+#design: 0,0,DOTS,1,2,500
+#design: 0,0,DOTS,2,0,0
+#design: 0,0,DOTS,3,1,50
+#design: 1,1,SHAPES,0,2,500
+#design: 1,1,SHAPES,1,0,0
+#design: 1,1,SHAPES,2,1,50
+#design: 1,1,SHAPES,3,3,1000
+912,design,logged,
+912,Experiment,started
+926,Stimulus,presented,18
+2710,Keyboard,received,32,wait
+2727,Stimulus,presented,17
+2943,Stimulus,presented,0
+3210,Stimulus,presented,17
+4227,Stimulus,presented,4
+4493,Stimulus,presented,17
+5510,Stimulus,presented,0
+5777,Stimulus,presented,17
+6793,Stimulus,presented,4
+7060,Stimulus,presented,17
+8077,Stimulus,presented,0
+8343,Stimulus,presented,17
+9360,Stimulus,presented,4
+9627,Stimulus,presented,17
+10644,Stimulus,presented,19
+12443,Keyboard,received,1073741903,wait
+12461,Stimulus,presented,20
+12962,Data,saved
+12977,Stimulus,presented,17
+13193,Stimulus,presented,0
+13460,Stimulus,presented,17
+13977,Stimulus,presented,4
+14243,Stimulus,presented,17
+14760,Stimulus,presented,0
+15027,Stimulus,presented,17
+15543,Stimulus,presented,4
+15810,Stimulus,presented,17
+16327,Stimulus,presented,0
+16594,Stimulus,presented,17
+17110,Stimulus,presented,4
+17377,Stimulus,presented,17
+17893,Stimulus,presented,19
+19155,Keyboard,received,1073741903,wait
+19160,Stimulus,presented,20
+19661,Data,saved
+19677,Stimulus,presented,17
+19893,Stimulus,presented,0
+20160,Stimulus,presented,4
+20429,Stimulus,presented,0
+20693,Stimulus,presented,4
+20960,Stimulus,presented,0
+21227,Stimulus,presented,4
+21494,Stimulus,presented,19
+22592,Keyboard,received,1073741904,wait
+22610,Stimulus,presented,20
+23111,Data,saved
+23127,Stimulus,presented,17
+23343,Stimulus,presented,0
+23610,Stimulus,presented,17
+23677,Stimulus,presented,4
+23943,Stimulus,presented,17
+24010,Stimulus,presented,0
+24277,Stimulus,presented,17
+24343,Stimulus,presented,4
+24610,Stimulus,presented,17
+24676,Stimulus,presented,0
+24943,Stimulus,presented,17
+25010,Stimulus,presented,4
+25277,Stimulus,presented,17
+25343,Stimulus,presented,19
+26209,Keyboard,received,1073741903,wait
+26210,Stimulus,presented,20
+26710,Data,saved
+26727,Stimulus,presented,17
+26943,Stimulus,presented,8
+27210,Stimulus,presented,17
+27727,Stimulus,presented,12
+27993,Stimulus,presented,17
+28510,Stimulus,presented,8
+28777,Stimulus,presented,17
+29293,Stimulus,presented,12
+29560,Stimulus,presented,17
+30077,Stimulus,presented,8
+30344,Stimulus,presented,17
+30860,Stimulus,presented,12
+31127,Stimulus,presented,17
+31644,Stimulus,presented,19
+34023,Keyboard,received,1073741903,wait
+34027,Stimulus,presented,20
+34527,Data,saved
+34544,Stimulus,presented,17
+34760,Stimulus,presented,8
+35026,Stimulus,presented,12
+35293,Stimulus,presented,8
+35560,Stimulus,presented,12
+35827,Stimulus,presented,8
+36093,Stimulus,presented,12
+36360,Stimulus,presented,19
+36693,Keyboard,received,1073741904,wait
+36710,Stimulus,presented,20
+37210,Data,saved
+37227,Stimulus,presented,17
+37443,Stimulus,presented,8
+37710,Stimulus,presented,17
+37777,Stimulus,presented,12
+38044,Stimulus,presented,17
+38110,Stimulus,presented,8
+38377,Stimulus,presented,17
+38443,Stimulus,presented,12
+38710,Stimulus,presented,17
+38776,Stimulus,presented,8
+39043,Stimulus,presented,17
+39110,Stimulus,presented,12
+39377,Stimulus,presented,17
+39443,Stimulus,presented,19
+41147,Keyboard,received,1073741903,wait
+41160,Stimulus,presented,20
+41661,Data,saved
+41677,Stimulus,presented,17
+41893,Stimulus,presented,8
+42160,Stimulus,presented,17
+43177,Stimulus,presented,12
+43444,Stimulus,presented,17
+44460,Stimulus,presented,8
+44727,Stimulus,presented,17
+45744,Stimulus,presented,12
+46010,Stimulus,presented,17
+47027,Stimulus,presented,8
+47294,Stimulus,presented,17
+48310,Stimulus,presented,12
+48577,Stimulus,presented,17
+49594,Stimulus,presented,19
+51282,Keyboard,received,1073741903,wait
+51294,Stimulus,presented,20
+51794,Data,saved
+51794,Experiment,ended

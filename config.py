@@ -1,3 +1,8 @@
+# Experiment Mode
+DEV_MODE = True
+DATA_DIR = "data/dev" if DEV_MODE else "data/trial"
+EVENTS_DIR = "events/dev" if DEV_MODE else "events/trial"
+
 # Colour config
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -18,7 +23,7 @@ RIGHT_OUTER = (120, -50) # fourth element
 
 # Trial config
 trial_latencies = [0, 50, 500, 1000] # interstimulus interval in milliseconds
-trial_repetitions = 1 # number of times each isi is presented (default to be 5)
+trial_repetitions = 10 
 
 # Variable names
 condition = "condition"
